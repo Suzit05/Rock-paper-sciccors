@@ -1,0 +1,88 @@
+<script>
+
+    let getcomputerchoice = () => {
+        let output = (Math.floor((Math.random() * 3)))
+        if (output == 0) {
+            return 'ROCK'
+        }
+        else if (output == 1) {
+            return 'PAPER'
+        }
+        else if (output == 2) {
+            return 'SCISSOR'
+        }
+
+
+
+    }
+
+    getcomputerchoice();
+
+
+
+
+
+    let playRound = (playerSelection, computerSelection, userscore, computerscore) => {
+
+
+
+        if (playerSelection === 'ROCK' && computerSelection === 'SCISSOR') {
+            userscore++
+            return 'You Won'
+
+
+        }
+
+        else if (playerSelection === computerSelection) {
+
+            return 'tie'
+        }
+
+        else if (playerSelection === 'SCISSOR' && computerSelection === 'PAPER') {
+            userscore++
+            return 'You Won'
+
+        }
+        else if (playerSelection === 'PAPER' && computerSelection === 'ROCK') {
+            userscore++
+            return 'You Won'
+
+        }
+        else {
+            computerscore++;
+            return 'You lost'
+        }
+
+
+
+        console.log(userscore)
+
+
+
+    }
+
+
+
+    for (let i = 0; i <= 5; i++) {
+        const playerSelection = prompt('enter your choice');
+        console.log(playerSelection);
+        const computerSelection = getcomputerchoice();
+        console.log(computerSelection);
+
+
+
+
+
+        console.log(playRound(playerSelection, computerSelection, 0, 0));
+
+
+
+    }
+
+
+
+
+
+
+
+</script>
