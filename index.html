@@ -1,88 +1,49 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
 
-    let getcomputerchoice = () => {
-        let output = (Math.floor((Math.random() * 3)))
-        if (output == 0) {
-            return 'ROCK'
-        }
-        else if (output == 1) {
-            return 'PAPER'
-        }
-        else if (output == 2) {
-            return 'SCISSOR'
-        }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
 
+    <div class="container">
+        <div>
+            <div class="heading">
+                COMPUTER VS HUMAN WAR
+            </div>
+            <div class="secHeading">
+                CHOOSE YOUR WEAPON
+            </div>
+            <div class="outBtn">
+                <div class="option">
+                    <button class="rock">Rock</button>
+                    <button class="paper ">Paper</button>
+                    <button class="scissor">Scissor</button>
+                </div>
+            </div>
 
-    }
-
-    getcomputerchoice();
-
-
-
-
-
-    let playRound = (playerSelection, computerSelection, userscore, computerscore) => {
-
-
-
-        if (playerSelection === 'ROCK' && computerSelection === 'SCISSOR') {
-            userscore++
-            return 'You Won'
-
-
-        }
-
-        else if (playerSelection === computerSelection) {
-
-            return 'tie'
-        }
-
-        else if (playerSelection === 'SCISSOR' && computerSelection === 'PAPER') {
-            userscore++
-            return 'You Won'
-
-        }
-        else if (playerSelection === 'PAPER' && computerSelection === 'ROCK') {
-            userscore++
-            return 'You Won'
-
-        }
-        else {
-            computerscore++;
-            return 'You lost'
-        }
-
-
-
-        console.log(userscore)
-
-
-
-    }
-
-
-
-    for (let i = 0; i <= 5; i++) {
-        const playerSelection = prompt('enter your choice');
-        console.log(playerSelection);
-        const computerSelection = getcomputerchoice();
-        console.log(computerSelection);
+            <div class="lastTextContainer">
+                <div class="movesLeft">
+                    Moves left: 5
+                </div>
+                <div class="urScore">
+                    Your Score: 0
+                </div>
+                <div class="result">
+                    Result:
+                </div>
+            </div>
 
 
 
 
+        </div>
+    </div>
+</body>
+<script src="javascipt.js"></script>
 
-        console.log(playRound(playerSelection, computerSelection, 0, 0));
-
-
-
-    }
-
-
-
-
-
-
-
-</script>
+</html>
